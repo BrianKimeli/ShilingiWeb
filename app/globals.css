@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --shilingi-green: #008060;
+  --shilingi-surface: #fafaf8;
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-libre-baskerville), "Times New Roman", Times, Georgia, serif;
+  color-scheme: light;
+}
+
+/* Stop mobile night mode from inverting or washing out the brand mark */
+.shilingi-logo {
+  color-scheme: only light;
+  forced-color-adjust: none;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.shilingi-logo__img {
+  filter: none !important;
+  -webkit-filter: none !important;
+  mix-blend-mode: normal;
+}
+
+@theme inline {
+  --color-shilingi-green: var(--shilingi-green);
+  --color-shilingi-surface: var(--shilingi-surface);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-serif);
+}
+
+body {
+  background-color: var(--shilingi-surface);
+  color: #0f172a;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+.times-masthead {
+  font-family: var(--font-serif);
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.times-headline {
+  font-family: var(--font-serif);
+  font-weight: 700;
+}
+
+/* Comfortable reading for long posts */
+.article-prose {
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: #374151;
+}
+
+.article-prose-p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: #374151;
+}
+
+.article-prose li {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+.article-prose-heading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.3;
+}
