@@ -1,0 +1,24 @@
+{
+    "rewrites": [
+      {
+        "source": "/",
+        "has": [
+          {
+            "type": "host",
+            "value": "shilingitimes.vercel.app"
+          }
+        ],
+        "destination": "/times"
+      },
+      {
+        "source": "/:path*",
+        "has": [
+          {
+            "type": "host",
+            "value": "shilingitimes.vercel.app"
+          }
+        ],
+        "destination": "/times/:path*"
+      }
+    ]
+  }
