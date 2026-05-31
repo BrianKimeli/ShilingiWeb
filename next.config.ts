@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
         destination: "/times", 
         permanent: true 
       },
+      // ONLY redirect to the new domain if the request is coming from the old app domain
       {
         source: '/times',
         has: [
@@ -35,6 +36,7 @@ const nextConfig: NextConfig = {
 
   async rewrites() {
     return [
+      // When landing on the blog domain, silently mask the root to show /times content
       {
         source: '/',
         has: [
@@ -45,6 +47,7 @@ const nextConfig: NextConfig = {
         ],
         destination: '/times',
       },
+      // Handle deeper blog paths (e.g., shilingitimes.vercel.app/post-1) without breaking assets
       {
         source: '/:path((?!_next/static|_next/image|favicon.ico|api).*)',
         has: [
