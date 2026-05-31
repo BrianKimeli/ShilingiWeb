@@ -14,12 +14,12 @@ export default function TimesHeader() {
       <div className="mx-auto max-w-2xl px-5">
         <div className="flex items-center justify-between py-3 text-sm text-slate-500">
           <time dateTime={new Date().toISOString().split("T")[0]}>{today}</time>
-          <Link
-            href="/"
+          <a
+            href="https://shilingiapp.vercel.app"
             className="rounded-lg bg-[#008060] px-3.5 py-2 text-sm font-semibold text-white transition hover:bg-[#006b4f]"
           >
             {APP_NAME} App
-          </Link>
+          </a>
         </div>
 
         <div className="pb-6 pt-1 text-center">
