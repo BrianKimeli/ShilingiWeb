@@ -11,14 +11,14 @@
         "destination": "/times"
       },
       {
-        "source": "/((?!_next/static|_next/image|favicon.ico|api).*)",
+        "source": "/:path((?!_next/static|_next/image|favicon.ico|api).*)",
         "has": [
           {
             "type": "host",
             "value": "shilingitimes.vercel.app"
           }
         ],
-        "destination": "/times/:1"
+        "destination": "/times/:path*"
       }
     ]
   }
