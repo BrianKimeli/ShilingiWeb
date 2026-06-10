@@ -33,6 +33,12 @@ export default function AppNavbar() {
           <Link href="/times" className="hover:text-white">
             The Shilingi Times
           </Link>
+          <Link href="/privacy" className="hover:text-white">
+            Privacy
+          </Link>
+          <Link href="/terms" className="hover:text-white">
+            Terms
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
