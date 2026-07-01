@@ -1,6 +1,6 @@
 import { ExternalLink } from "lucide-react";
 
-const PLAY_STORE_URL = "https://play.google.com/store";
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.finesse.shilingi";
 
 type GooglePlayButtonProps = {
   variant?: "light" | "dark" | "outline";
