@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 :root {
   --shilingi-green: #008060;
   --shilingi-surface: #fafaf8;
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-libre-baskerville), "Times New Roman", Times, Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+  --font-body: 'Merriweather', Georgia, serif;
   color-scheme: light;
 }
 
-/* Stop mobile night mode from inverting or washing out the brand mark */
 .shilingi-logo {
   color-scheme: only light;
   forced-color-adjust: none;
@@ -25,48 +26,55 @@
 @theme inline {
   --color-shilingi-green: var(--shilingi-green);
   --color-shilingi-surface: var(--shilingi-surface);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
 }
 
 body {
   background-color: var(--shilingi-surface);
   color: #0f172a;
-  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
+/* World-class Publication Masthead Styling */
 .times-masthead {
-  font-family: var(--font-serif);
-  font-feature-settings: "kern" 1, "liga" 1;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  font-feature-settings: "kern" 1, "liga" 1, "dlig" 1;
 }
 
 .times-headline {
-  font-family: var(--font-serif);
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
+  letter-spacing: -0.015em;
 }
 
-/* Comfortable reading for long posts */
+/* Distraction-Free Longform Prose Reading */
 .article-prose {
+  font-family: 'Merriweather', Georgia, serif;
   font-size: 1.125rem;
-  line-height: 1.85;
-  color: #374151;
+  line-height: 1.9;
+  color: #27272a;
 }
 
 .article-prose-p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
   font-size: 1.125rem;
-  line-height: 1.85;
-  color: #374151;
+  line-height: 1.9;
+  color: #27272a;
 }
 
 .article-prose li {
   font-size: 1.0625rem;
-  line-height: 1.75;
-  color: #374151;
+  line-height: 1.8;
+  color: #27272a;
 }
 
 .article-prose-heading {
-  font-family: var(--font-serif);
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
 }
