@@ -5,7 +5,22 @@ export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const host = request.headers.get('host');
 
-  // 1. Handling the dedicated Blog Domain
+  // 1. Bypass studio, api, feeds, legal pages, and root metadata
+  const isBypassPath =
+    url.pathname.startsWith('/studio') ||
+    url.pathname.startsWith('/api') ||
+    url.pathname.startsWith('/privacy') ||
+    url.pathname.startsWith('/terms') ||
+    url.pathname === '/feed.xml' ||
+    url.pathname === '/ads.txt' ||
+    url.pathname === '/sitemap.xml' ||
+    url.pathname === '/robots.txt';
+
+  if (isBypassPath) {
+    return NextResponse.next();
+  }
+
+  // 2. Handling the dedicated Blog Domain
   if (host === 'shilingitimes.vercel.app') {
     // If they land on the root '/', silently serve the main /times page code
     if (url.pathname === '/') {
