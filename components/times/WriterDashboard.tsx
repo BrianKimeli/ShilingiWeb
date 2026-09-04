@@ -259,7 +259,7 @@ Write your story introduction here...
             <span className="rounded-md bg-[#008060] px-2.5 py-1 text-xs font-bold text-white uppercase tracking-wider">
               Editorial Desk
             </span>
-            <span className="text-xs text-slate-500">• 3-Writer Newsroom Active</span>
+            <span className="text-xs text-slate-500">• 3-Person Newsroom (Editors, Writers & Tech Lead)</span>
           </div>
           <h1 className="times-headline mt-2 text-3xl font-bold text-slate-900">
             Publishing Desk & Content Engine
@@ -444,10 +444,10 @@ Write your story introduction here...
             {/* Core Writer Selector */}
             <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xs">
               <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
-                Editorial Author
+                Byline Author / Editor
               </label>
               <p className="mt-1 text-xs text-slate-500">
-                Assigned to one of your 3 established columnists:
+                Select which team member is publishing this story:
               </p>
               <div className="mt-3 space-y-2">
                 {writers.map((w) => (

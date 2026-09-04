@@ -87,7 +87,7 @@ export default function TimesHomePage() {
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4 text-emerald-400" />
                   <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-400">
-                    Editorial Team
+                    Editors & Writers
                   </h3>
                 </div>
                 <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">
@@ -95,7 +95,7 @@ export default function TimesHomePage() {
                 </span>
               </div>
               <p className="mt-3 text-xs leading-relaxed text-slate-300">
-                Independent reporting across Tech, Business, Markets, Wealth, and Policy.
+                Reporting, market analysis, and technology produced by our core 3-person newsroom.
               </p>
               <div className="mt-4 space-y-3">
                 {writers.map((writer) => (

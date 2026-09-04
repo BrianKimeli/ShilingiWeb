@@ -49,7 +49,7 @@ export default async function WriterProfilePage({ params }: PageProps) {
 
           <div className="flex-1">
             <span className="rounded-full bg-[#008060]/10 px-3 py-1 text-xs font-bold text-[#008060]">
-              Columnist & Author
+              Editors & Writers
             </span>
             <h1 className="times-headline mt-2 text-3xl font-bold text-slate-900">
               {writer.name}

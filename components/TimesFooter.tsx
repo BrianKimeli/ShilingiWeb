@@ -50,27 +50,22 @@ export default function TimesFooter() {
 
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">
-              Editorial Columnists
+              Editors & Writers
             </h4>
             <ul className="mt-3 space-y-2 text-xs font-medium">
               <li>
-                <Link href="/times/writers/finesse" className="hover:text-[#008060]">
-                  Finesse (Senior Editor)
+                <Link href="/times/writers/steve-sumbi" className="hover:text-[#008060]">
+                  Steve Sumbi (Lead Writer)
                 </Link>
               </li>
               <li>
-                <Link href="/times/writers/steve-sumbi" className="hover:text-[#008060]">
-                  Steve Sumbi (Tech & Markets)
+                <Link href="/times/writers/finesse" className="hover:text-[#008060]">
+                  Finesse (Tech Lead & Editor)
                 </Link>
               </li>
               <li>
                 <Link href="/times/writers/felix-omariba" className="hover:text-[#008060]">
-                  Felix Omariba (Wealth & Savings)
-                </Link>
-              </li>
-              <li>
-                <Link href="/times/writers/amina-mohamed" className="hover:text-[#008060]">
-                  Amina Mohamed (Micro-Investing)
+                  Felix Omariba (Head of Marketing)
                 </Link>
               </li>
             </ul>
