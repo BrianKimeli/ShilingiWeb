@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import RichArticleRenderer from "@/components/times/RichArticleRenderer";
 import AppConversionCard from "@/components/times/AppConversionCard";
+import AdPlacement from "@/components/times/AdPlacement";
 import ReadingProgressBar from "@/components/times/ReadingProgressBar";
 import JsonLd from "@/components/JsonLd";
 import ShareButton from "@/components/times/ShareButton";
@@ -115,8 +116,14 @@ export default async function ArticlePage({ params }: PageProps) {
           {/* Formatted Article Content */}
           <RichArticleRenderer content={article.content} />
 
+          {/* In-Article High Yield Monetization Slot */}
+          <AdPlacement type="in-article" />
+
           {/* Client Interactive Actions: Tipping + Likes */}
           <ArticleClientActions writer={writer} initialLikes={article.likesCount ?? 84} />
+
+          {/* Sponsored Partner Spotlight */}
+          <AdPlacement type="sponsored" />
 
           {/* Native App Conversion Card */}
           <AppConversionCard />

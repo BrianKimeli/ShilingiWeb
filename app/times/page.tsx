@@ -5,6 +5,7 @@ import Link from "next/link";
 import { HeroArticle, ArticleRow, SectionDivider } from "@/components/times/ArticleCard";
 import NewsletterBox from "@/components/times/NewsletterBox";
 import AppConversionCard from "@/components/times/AppConversionCard";
+import AdPlacement from "@/components/times/AdPlacement";
 import JsonLd from "@/components/JsonLd";
 import { fetchAllPosts } from "@/lib/sanity/client";
 import { articles as defaultArticles, categoriesList, Article } from "@/lib/articles";
@@ -114,6 +115,9 @@ export default function TimesHomePage() {
             </div>
           </div>
         </div>
+
+        {/* High-Yield Monetization Banner */}
+        <AdPlacement type="leaderboard" />
 
         {/* Native App Conversion Card */}
         <AppConversionCard />
