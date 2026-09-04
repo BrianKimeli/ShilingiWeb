@@ -55,17 +55,17 @@ export default function TimesFooter() {
             <ul className="mt-3 space-y-2 text-xs font-medium">
               <li>
                 <Link href="/times/writers/steve-sumbi" className="hover:text-[#008060]">
-                  Steve Sumbi (Lead Writer)
+                  Steve Sumbi (Lead Writer & Editor)
                 </Link>
               </li>
               <li>
                 <Link href="/times/writers/finesse" className="hover:text-[#008060]">
-                  Finesse (Tech Lead & Editor)
+                  Finesse (Writer & Tech Lead)
                 </Link>
               </li>
               <li>
                 <Link href="/times/writers/felix-omariba" className="hover:text-[#008060]">
-                  Felix Omariba (Head of Marketing)
+                  Felix Omariba (Growth Lead & Writer)
                 </Link>
               </li>
             </ul>

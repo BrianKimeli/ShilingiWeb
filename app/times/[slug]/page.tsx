@@ -40,8 +40,8 @@ export default async function ArticlePage({ params }: PageProps) {
     id: "finesse",
     slug: "finesse",
     name: article.author,
-    role: "Tech Lead & Columnist",
-    bio: "Tech Lead at Shilingi, writing candid breakdowns on personal finance, tech systems, and wealth creation.",
+    role: "Writer & Tech Lead",
+    bio: "Writer & Tech Lead at Shilingi, writing candid breakdowns on personal finance, tech systems, and wealth creation.",
     articleCount: 3,
   };
 
