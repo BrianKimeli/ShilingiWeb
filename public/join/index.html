@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Chama - Shilingi</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            background-color: #fafaf8;
+            color: #1e293b;
+            padding: 50px 20px;
+            margin: 0;
+        }
+        .card {
+            max-width: 420px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 36px 24px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+        .logo {
+            width: 64px;
+            height: 64px;
+            background: #008060;
+            border-radius: 16px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        h2 {
+            margin: 0 0 12px;
+            font-size: 22px;
+            color: #0f172a;
+        }
+        p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 0 24px;
+        }
+        .code-pill {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-weight: bold;
+            color: #008060;
+            margin-bottom: 24px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            background: #008060;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+        .btn-outline {
+            background: #ffffff;
+            color: #334155;
+            border: 1px solid #cbd5e1;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            const playStoreUrl = "https://play.google.com/store/apps/details?id=com.finesse.shilingi";
+            const appUrl = code ? "shilingi://join?code=" + encodeURIComponent(code) : "shilingi://open";
+
+            // Update manual button hrefs
+            const openAppBtn = document.getElementById('open-app-btn');
+            if (openAppBtn) openAppBtn.href = appUrl;
+
+            const codeDisplay = document.getElementById('code-display');
+            if (code && codeDisplay) {
+                codeDisplay.innerText = "Invite Code: " + code;
+                codeDisplay.style.display = "inline-block";
+            }
+
+            // Attempt opening custom app scheme
+            window.location.href = appUrl;
+
+            // Fallback to Google Play Store after 2 seconds if app isn't installed
+            setTimeout(function() {
+                window.location.href = playStoreUrl;
+            }, 2000);
+        };
+    </script>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">S</div>
+        <h2>Joining Shilingi Chama...</h2>
+        <p>Opening the Shilingi app or redirecting to the Google Play Store...</p>
+        <div id="code-display" class="code-pill" style="display: none;"></div>
+        <a id="open-app-btn" class="btn" href="shilingi://open">Open in Shilingi App</a>
+        <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.finesse.shilingi" target="_blank" rel="noopener noreferrer">Install from Google Play</a>
+    </div>
+</body>
+</html>
